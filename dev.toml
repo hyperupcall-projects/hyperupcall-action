@@ -1,0 +1,3 @@
+[rules]
+'nodejs/eslint/eslint-must-have-content' = 'off'
+'nodejs/eslint/eslint-must-not-have-dependencies' = 'off'

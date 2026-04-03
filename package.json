@@ -2,9 +2,9 @@
 	"version": "0.1.0",
 	"main": "./src/main.ts",
 	"scripts": {
-		"format": "prettier --write '**/*.ts'",
+		"format": "hyperupcall-scripts-nodejs format",
 		"format-check": "prettier --check '**/*.ts'",
-		"lint": "eslint src/**/*.ts",
+		"lint": "hyperupcall-scripts-nodejs lint",
 		"package": "ncc build --source-map",
 		"test": "jest",
 		"all": "npm run build && npm run format && npm run lint && npm run package && npm test"
@@ -24,8 +24,14 @@
 		"eslint-plugin-jest": "^25.3.2",
 		"jest": "^27.2.5",
 		"js-yaml": "^4.1.0",
-		"prettier": "2.5.1",
 		"ts-jest": "^27.1.2",
-		"typescript": "^4.7.4"
-	}
+		"typescript": "^4.7.4",
+		"@hyperupcall/scripts-nodejs": "0.9.0"
+	},
+	"markdownlint-cli2": {
+		"extends": "./node_modules/@hyperupcall/markdownlint-config/.markdownlint.json"
+	},
+	"private": true,
+	"packageManager": "pnpm@10.33.0+sha512.10568bb4a6afb58c9eb3630da90cc9516417abebd3fabbe6739f0ae795728da1491e9db5a544c76ad8eb7570f5c4bb3d6c637b2cb41bfdcdb47fa823c8649319",
+	"prettier": "@hyperupcall/scripts-nodejs/config-prettier.js"
 }
